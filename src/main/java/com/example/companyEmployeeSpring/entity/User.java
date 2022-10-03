@@ -1,5 +1,6 @@
 package com.example.companyEmployeeSpring.entity;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,21 +13,15 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "Employee")
-
-public class Employee {
+@Table(name = "User")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private int id;
     private String name;
     private String surname;
     private String email;
-    private String phoneNumber;
-    private String position;
-    @ManyToOne
-    private Company company;
-    private String profilePic;
-    private double salary;
-
+    private String password;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 }

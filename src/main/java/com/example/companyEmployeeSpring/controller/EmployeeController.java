@@ -1,6 +1,5 @@
 package com.example.companyEmployeeSpring.controller;
 
-
 import com.example.companyEmployeeSpring.entity.Company;
 import com.example.companyEmployeeSpring.entity.Employee;
 import com.example.companyEmployeeSpring.repasitory.CompanyRepository;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 
 import java.io.File;
 import java.io.FileInputStream;

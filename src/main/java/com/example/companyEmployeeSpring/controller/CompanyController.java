@@ -2,9 +2,7 @@ package com.example.companyEmployeeSpring.controller;
 
 
 import com.example.companyEmployeeSpring.entity.Company;
-import com.example.companyEmployeeSpring.entity.Employee;
 import com.example.companyEmployeeSpring.repasitory.CompanyRepository;
-import com.example.companyEmployeeSpring.repasitory.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -41,6 +39,7 @@ public class CompanyController {
         companyRepository.save(company);
         return "redirect:/company";
     }
+
     @GetMapping("/company/delete")
     public String delete(@RequestParam("id") int id){
         companyRepository.deleteById(id);
